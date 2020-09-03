@@ -8,7 +8,7 @@ working in progress.
 
 - [Introduction](#Introduction)
 - [Motivation](#Motivation)
-- [SLSBoost](#SLSBoost])
+- [SLSBoost](#SLSBoost)
 - [Quick Start Guide](#quick-start-guide)
 
 <!-- - [Citation](#citation) -->
