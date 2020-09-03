@@ -1,7 +1,7 @@
 <h1 align="center">EMMN</h1>
 <h5 align="center">Exponential Mean-centric Moving Normalization for Optimization Algorithm</h5>
 
-<div align="center"><a href="https://arxiv.org/abs/"> arxiv.org/abs/</a></div>
+<div align="center"><a href="https://www.academia.edu/44007671/EMMN_Exponential_Mean_centric_Moving_Normalization_for_Stochastic_Optimization">download the paper</a></div>
 
 
 working in progress.
@@ -11,7 +11,7 @@ working in progress.
 - [SLSBoost](#SLSBoost])
 - [Quick Start Guide](#quick-start-guide)
 
-- [Citation](#citation)
+<!-- - [Citation](#citation) -->
 
 
 
@@ -25,7 +25,7 @@ In this algorithm, we first decompose the gradient into two parts, one is the mo
 
 **Figure 1 : Visualization of EMMA algorithm.**
 
-Since this algorithm normalize gradient as if the point of the estimated moving average (i.e. momentum) is the center (i.e. zero), momentum is not affected by the normalization. Hence, momentum is invariant. This explicitly mitigate the problem of *diagonal correlated trajectory*, a latent property of adaptive optimization algorithm, which is identified and explained in [the paper](). Since gradient is divided by running estimated standard deviation at each time step, the fluctuation of the parameter moving has the similar radius from the estimated center for each element. This enables *soft-homoscedastic gradient sampling* which brings informative momentum estimation.
+Since this algorithm normalize gradient as if the point of the estimated moving average (i.e. momentum) is the center (i.e. zero), momentum is not affected by the normalization. Hence, momentum is invariant. This explicitly mitigate the problem of *diagonal correlated trajectory*, a latent property of adaptive optimization algorithm, which is identified and explained in [the paper](https://www.academia.edu/44007671/EMMN_Exponential_Mean_centric_Moving_Normalization_for_Stochastic_Optimization). Since gradient is divided by running estimated standard deviation at each time step, the fluctuation of the parameter moving has the similar radius from the estimated center for each element. This enables *soft-homoscedastic gradient sampling* which brings informative momentum estimation.
 
 
 
@@ -86,7 +86,7 @@ We empirically showed the existence of these two properties,  as shown in Figure
 </div>
 **Figure 3: 3D projected parameter sampling.** Ten continuous timestep parameter's data points are projected to the three dimensional space to visualize dimension-wise variance for SGD momentum, RAdam and EMMN. Momentum coefficient (i.e. discount rate for exponential moving average or momentum computation) are set as 0.95 on all algorithm for fair comparison. Also, these plots are scaled so that the volume of the box defined by planes where standard deviation is 1 are the same for all of algorithm.  **a.** SGD momentum produces big difference of element-wise variance. **b.** RAdam successfully compress variance differences. We chose RAdam instead of Adam because of its robustness for parameter setting. **c.** Our proposal optimizer, EMMN, compress variance differences most strongly.-->
 
-Our study suggest diagonal correlated trajectory causes high-variance, thus lower generalization ability as show in Figure 4. We theoretically show soft-homoscedastic gradient sampling has advantage in the paper. Please refer [the paper]() for the detail.
+Our study suggest diagonal correlated trajectory causes high-variance, thus lower generalization ability as show in Figure 4. We theoretically show soft-homoscedastic gradient sampling has advantage in the paper. Please refer [the paper](https://www.academia.edu/44007671/EMMN_Exponential_Mean_centric_Moving_Normalization_for_Stochastic_Optimization) for the detail.
 
 <img src="img_readme/figure4.png"/>
 
@@ -132,18 +132,18 @@ If you need to further speed up the learning process, try SLSBoost. We  haven't 
 
 
 
-## Citation
+<!-- ## Citation
 
 If you find our algorithm useful, please cite the following paper.
 
 > Tadanobu Ohata (2020). EMMN: Exponential Mean-centric Moving Normalization for Stochastic Optimization
 
 ```
-@article{ohata2020emmn,
+@article{,
   title={EMMN: Exponential Mean-centric Moving Normalization for Stochastic Optimization},
   author={Tadanobu Ohata},
-  journal={arXiv preprint arXiv:},
-  year={2020}
+  journal={},
+  year={}
 }
-```
+``` -->
 
