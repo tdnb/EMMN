@@ -13,7 +13,7 @@ class EMMN(Optimizer):
             | float: fixed target standard deviation will be used for normalized residual gradient (recommended value = 2e-4)
             | tuple(float, float): relative target standard deviation will be used. (λ, β_v) of λ√EMA(mean(Var(θ'))| β_v))
         eps (float, optional): term added to the denominator to improve numerical stability (default: 1e-8)
-        weight_decay (float, optional): factor of one step weight decay (i.e. one_step_weight_decay = weight_decay * lr * alpha) (default: 0)
+        weight_decay (float, optional): factor of one step weight decay (i.e. one_step_weight_decay = weight_decay * lr) (default: 0)
         sls_boost (tuple:(float, float) | None, optional): (mixing ratio of boosting vector, discount factor of EMA(updater)) (default: None)
     """
 
@@ -133,7 +133,7 @@ class EMMN_PDCBoost(Optimizer):
             | float: fixed target standard deviation will be used for normalized residual gradient (recommended value = 2e-4)
             | tuple(float, float): relative target standard deviation will be used. (λ, β_v) of λ√EMA(mean(Var(θ'))| β_v))
         eps (float, optional): term added to the denominator to improve numerical stability (default: 1e-8)
-        weight_decay (float, optional): factor of one step weight decay (i.e. one_step_weight_decay = weight_decay * lr * alpha) (default: 0)
+        weight_decay (float, optional): factor of one step weight decay (i.e. one_step_weight_decay = weight_decay * lr) (default: 0)
         pdc_boost (tuple:(float, float) | None, optional): (mixing ratio of boosting vector, discount factor of EMA(updater)) (default: None)
     """
 
